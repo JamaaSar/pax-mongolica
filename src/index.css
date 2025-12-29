@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Pax Mongolica Design System - Monochrome Editorial */
+
+@layer base {
+  :root {
+    /* Core palette - Black, white, and gray */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+
+    /* Pure black primary */
+    --primary: 0 0% 8%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Light gray secondary */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 8%;
+
+    /* Muted grays */
+    --muted: 0 0% 94%;
+    --muted-foreground: 0 0% 45%;
+
+    /* Medium gray accent */
+    --accent: 0 0% 30%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 0 0% 8%;
+
+    --radius: 0rem;
+
+    /* Custom gray tokens */
+    --gray-100: 0 0% 96%;
+    --gray-200: 0 0% 90%;
+    --gray-300: 0 0% 80%;
+    --gray-400: 0 0% 60%;
+    --gray-500: 0 0% 45%;
+    --gray-600: 0 0% 30%;
+    --gray-700: 0 0% 20%;
+    --gray-800: 0 0% 12%;
+    --gray-900: 0 0% 8%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(
+      180deg,
+      hsl(0 0% 8%) 0%,
+      hsl(0 0% 15%) 100%
+    );
+    --gradient-subtle: linear-gradient(
+      180deg,
+      hsl(0 0% 100%) 0%,
+      hsl(0 0% 96%) 100%
+    );
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.06);
+    --shadow-card: 0 8px 30px -8px hsl(0 0% 0% / 0.1);
+    --shadow-elevated: 0 20px 60px -15px hsl(0 0% 0% / 0.12);
+
+    /* Typography */
+    --font-mono: "Courier New", Courier, monospace;
+
+    /* Transitions */
+    --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 25%;
+    --sidebar-primary: 0 0% 8%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 94%;
+    --sidebar-accent-foreground: 0 0% 8%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 0 0% 8%;
+  }
+
+  .dark {
+    --background: 0 0% 8%;
+    --foreground: 0 0% 96%;
+
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 96%;
+
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 96%;
+
+    --primary: 0 0% 96%;
+    --primary-foreground: 0 0% 8%;
+
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 0 0% 96%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 55%;
+
+    --accent: 0 0% 65%;
+    --accent-foreground: 0 0% 8%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 0% 80%;
+
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 0 0% 96%;
+    --sidebar-primary-foreground: 0 0% 8%;
+    --sidebar-accent: 0 0% 18%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 0 0% 80%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-mono);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-mono);
+    @apply tracking-tight font-bold;
+  }
+}
+
+@layer components {
+  .bg-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-subtle {
+    background: var(--gradient-subtle);
+  }
+
+  .gold-line {
+    @apply h-px w-12 bg-foreground;
+  }
+
+  .gold-line-vertical {
+    @apply w-px h-12 bg-foreground;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
