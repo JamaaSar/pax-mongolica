@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Layout } from "@/components/layout/Layout";
 import { Section, SectionHeader } from "@/components/ui/section";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tab";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 import { Award, Users, Compass, Target, Shield } from "lucide-react";
 

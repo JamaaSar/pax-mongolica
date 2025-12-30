@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Section, SectionHeader } from "@/components/ui/section";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tab";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
@@ -96,7 +96,6 @@ const Strategies = () => {
             <motion.h1
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground tracking-tight leading-[1.1] uppercase flex items-center gap-4"
               variants={fadeUp}>
-              <div className="h-px w-16 bg-primary-foreground/50" />
               Operational Strategies
             </motion.h1>
           </motion.div>
